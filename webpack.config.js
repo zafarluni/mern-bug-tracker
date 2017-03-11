@@ -24,6 +24,16 @@ module.exports = {
             }),
         new HtmlWebpackPlugin({template: 'src/index.html', filename:'index.html',inject:'body'})
     ],
+    resolve: {
+        alias: {
+            IssueList: path.resolve(__dirname, 'src/components/IssueList.jsx'),
+            IssueFilter: path.resolve(__dirname, 'src/components/IssueFilter.jsx'),
+            IssueAdd: path.resolve(__dirname, 'src/components/IssueAdd.jsx'), 
+            IssueTable: path.resolve(__dirname, 'src/components/IssueTable.jsx'),
+            IssueRow: path.resolve(__dirname, 'src/components/IssueRow.jsx'),
+        },
+        extensions: ['.js', '.jsx']
+    },
     module: {
         rules: [
             {
@@ -43,6 +53,9 @@ module.exports = {
                 test: /\.css$/
             }
         ]
-    }
+    },
+
+    // devtool: 'cheap-module-eval-source-map'
+    devtool: 'source-map'
 
 };

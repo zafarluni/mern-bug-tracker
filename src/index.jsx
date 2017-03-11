@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import IssueList from 'IssueList';
 
-ReactDOM.render(<h1> Hello World</h1>, document.getElementById('app'));
+ReactDOM.render(<IssueList/>, document.getElementById('app'));

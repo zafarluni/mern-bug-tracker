@@ -6,7 +6,8 @@
   "scripts": {
     "clean-dist": "rimraf dist",
     "build": "yarn run clean-dist && webpack",
-    "start": "webpack-dev-server"
+    "webpack-dev-server": "webpack-dev-server",
+    "start" : "node server.js"
   },
   "dependencies": {
     "express": "^4.15.2",
